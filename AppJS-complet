@@ -1,0 +1,103 @@
+/* import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import { TextInput } from "react-native";
+import { Button } from "react-native";
+import React, { useState } from "react";
+import { Alert } from "react-native";
+
+export default function App() {
+  const [txtGoal, setGoal] = useState("");
+
+  const [goals, setGoals] = useState(sampleGoals);
+
+  const suppGoal = (goal) => {
+    setGoals(sampleGoals.splice(sampleGoals.indexOf(goal), 1));
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.caractere}>
+        {sampleGoals.map((goal) => (
+          <Text>
+            {goal}
+
+            <Button
+              onPress={() => {
+                Alert.alert(goal + " a été supprimé");
+                suppGoal(goal);
+                //sampleGoals.splice(sampleGoals.indexOf(goal), 1);
+                console.log(sampleGoals);
+              }}
+              title="Supp"
+              color="#841584"
+              paddingTop="20"
+              accessibilityLabel="Learn more about this purple button"
+            />
+            {"\n"}
+          </Text>
+        ))}
+      </Text>
+
+      <TextInput
+        style={styles.entree}
+        placeholder={"Ajouter un objectif"}
+        value={txtGoal}
+        onChangeText={(text) => setGoal(text)}
+      />
+
+      <Button
+        onPress={() => {
+          Alert.alert(txtGoal + " a été ajouté à la liste des objectifs");
+          sampleGoals.push(txtGoal);
+          setGoal("");
+        }}
+        title="Add"
+        color="#841584"
+        paddingTop="20"
+        accessibilityLabel="Learn more about this purple button"
+      />
+
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const sampleGoals = [
+  "Faire les courses",
+  "Aller à la salle de sport 3 fois par semaine",
+  "Monter à plus de 5000m d altitude",
+  "Acheter mon premier appartement",
+  "Perdre 5 kgs",
+  "Gagner en productivité",
+  "Apprendre un nouveau langage",
+  "Faire une mission en freelance",
+  "Organiser un meetup autour de la tech",
+  "Faire un triathlon",
+];
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "green",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column",
+    paddingTop: 10,
+  },
+  caractere: {
+    color: "white",
+    fontSize: 15,
+    fontWeight: "bold",
+  },
+  entree: {
+    backgroundColor: "white",
+    color: "black",
+    fontSize: 20,
+    fontWeight: "bold",
+  },
+  saisie: {
+    flex: 2,
+    flexDirection: "row",
+  },
+});
+ */
